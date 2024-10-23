@@ -1,0 +1,319 @@
+/* Popup overlay styles */
+.popup-overlay {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    z-index: 9999; /* Ensure it appears above other content */
+    overflow-y: auto; /* Scrollable for small devices */
+}
+
+/* Popup content styles */
+.popup-content {
+    background: white;
+    margin: 5% auto;
+    padding: 0px;
+    width: 90%; /* Increased width */
+    max-width: 1500px; /* You can adjust this if needed */
+    position: relative;
+    border-radius: 15px;
+    box-sizing: border-box;
+}
+
+@media screen and (max-width: 768px) {
+    /* Adjust the popup width for tablets and phones */
+    .popup-content {
+        width: 95%; /* Increased width for tablets */
+        padding: 15px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    /* Further adjustment for mobile phones */
+    .popup-content {
+        width: 100%; /* Full width on mobile */
+        padding: 10px;
+    }
+
+    .header h1 {
+        font-size: 1.5rem; /* Smaller header text for mobile */
+    }
+
+    .dealership h3 {
+        font-size: 1.2rem; /* Smaller dealership names */
+        color: black;
+    }
+
+    .dealership p {
+        font-size: 1rem; /* Smaller address text */
+    }
+
+    .button-container button {
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+}
+
+/* Close button styles */
+.popup-close {
+    position: absolute;
+    top: 1px;
+    right: 20px;
+    font-size: 24px;
+    scale: 2;
+    color: red;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 480px) {
+    .popup-close {
+        font-size: 20px; /* Slightly smaller close button */
+    }
+}
+
+/* Header styles */
+.dealer-header {
+    background-image:url("https://unkinddesigns.com/maxbuiltnew/wp-content/uploads/2024/10/slide-5.webp");
+	background-position:center;
+	height:35vh;
+	background-size:cover;
+    color: white;
+    text-align: center;
+    padding: 20px;
+	display:flex !important;
+	align-items:center !important;
+	justify-content:center !important;
+
+}
+
+.dealer-header h1 {
+    font-size: 2em;
+	background-color:#00317D;
+	padding-top:10px;
+	padding-bottom:10px;
+	padding-right:25px;
+	padding-left:25px;
+	border:1px solid white;
+
+}
+
+@media screen and (max-width: 480px) {
+    .header h1 {
+        font-size: 1.5rem; /* Adjusted for mobile */
+    }
+}
+
+/* Dealerships grid */
+.dealerships {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 20px;
+    gap: 20px; /* Add gap for consistent spacing */
+	background-color:#00317D;
+}
+
+/* Dealership container styles */
+.dealership {
+    background-color: white;
+    border: 2px solid #003366;
+    margin: 10px 0;
+    padding: 15px;
+    text-align: center;
+    box-sizing: border-box;
+	border-radius:10px;
+
+}
+.dealership h3{
+	color:#00317D;
+}
+
+/* First row of 3 dealerships (Desktop view) */
+.dealership:nth-child(-n+3) {
+    width: calc(33.33% - 30px); /* 3 columns for the first row on larger screens */
+}
+
+/* Subsequent dealerships (Desktop view) */
+.dealership:nth-child(n+4) {
+    width: calc(50% - 20px); /* 2 columns for the rest on larger screens */
+}
+
+/* Strict Responsive adjustments for mobile */
+@media screen and (max-width: 480px) {
+    .dealership {
+        width: 100% !important; /* Force 1 column layout on mobile */
+        margin-bottom: 20px;
+    }
+
+    .dealerships {
+        flex-direction: column; /* Make dealerships stack vertically */
+        align-items: center;
+    }
+
+    .dealership h3 {
+        font-size: 1.2rem; /* Adjust text size for mobile */
+    }
+
+    .dealership p {
+        font-size: 1rem;
+        word-break: break-word; /* Prevent text from overflowing */
+    }
+}
+
+/* Button container styles */
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+button {
+    border: none;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    width: 48%;
+    box-sizing: border-box;
+}
+
+.contact-form-btn {
+    background-color: white;
+    border: 3px solid #00317d;
+    border-radius: 15px;
+    color: black;
+}
+
+.contact-form-btn:hover {
+    background-color: white;
+    color: black;
+    scale: 0.9;
+}
+
+.call-now-btn {
+    background-color: #00317D;
+    border: 3px solid #00317d;
+    border-radius: 15px;
+}
+
+.call-now-btn:hover {
+    background-color: #00317D;
+    color: white;
+    scale: 0.9;
+}
+
+@media screen and (max-width: 480px) {
+    .button-container {
+        flex-direction: column; /* Stack buttons vertically on mobile */
+    }
+
+    button {
+        width: 100%;
+        margin-bottom: 10px; /* Add margin for spacing */
+    }
+}
+
+.dealership h3 {
+    color: black !important;
+    font-size: 1em;
+}
+
+/* Contact Form Styles */
+/* General form styles */
+#deal-contact-form  {
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+}
+
+#deal-contact-form label {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #003366 !important; /* Dark blue color */
+}
+
+#deal-contact-form input[type="text"],
+#deal-contact-form input[type="email"],
+#deal-contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    font-size: 1em;
+}
+
+#deal-contact-form textarea {
+    resize: vertical; /* Allow vertical resizing for message area */
+}
+
+#deal-contact-form input[type="text"]:focus,
+#deal-contact-form input[type="email"]:focus,
+#deal-contact-form  textarea:focus {
+    outline: none;
+    border: 1px solid #007bff; /* Change border color on focus */
+}
+
+#deal-contact-form button[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+#deal-contact-form button[type="submit"]:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Styling for form's first and last name columns */
+.form-row {
+    display: flex;
+    gap: 15px; /* Space between first and last name */
+}
+
+.form-row div {
+    flex: 1;
+}
+
+@media screen and (max-width: 768px) {
+    .form-row {
+        flex-direction: column; /* Stack fields on smaller devices */
+    }
+}
+.deal-submit{
+	display:flex;
+	justify-content:center;
+}
+.popup-form{
+	width:50% !important;
+	background-color:white;
+	display:flex;
+	justify-content:center;
+	margin:0 auto !important;
+	padding-top:25px;
+	background-image:url("https://unkinddesigns.com/maxbuiltnew/wp-content/uploads/2024/10/Form-bg.jpg");
+	background-size:cover;
+}
+@media screen and (max-width: 480px) {
+	.popup-form{
+		width:80% !important;
+	}
+}
+
+.popup-form label{
+	margin-top:-1.5em;
+
+}
+#deal-contact-form input{
+	border:3px solid blue !important;
+}
+#deal-contact-form label{
+	color:white !important;
+
+}
