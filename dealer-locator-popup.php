@@ -121,7 +121,7 @@ function send_contact_form_ajax_handler() {
     $product_name = sanitize_text_field($_POST['product_name']); // Get product name from the form
 
     // Prepare email
-    $to = 'Hirefoo@gmail.com'; // Replace with your email address
+    $to = 'notifi@yourdomain.com'; // Replace with your email address
     $subject = 'New Contact Form Submission';
     $headers = array('Content-Type: text/html; charset=UTF-8');
     $body = "<h1>New Dealer Contact Request</h1>
